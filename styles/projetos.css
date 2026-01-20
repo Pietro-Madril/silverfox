@@ -1,0 +1,92 @@
+.intro-projetos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.intro-projetos p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem; 
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 40px;
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.card-projeto-livre {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-projeto-livre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card-projeto-livre img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.conteudo-card {
+    padding: 20px; 
+    color: #333;
+}
+
+.conteudo-card h3 {
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 1.3rem; 
+}
+
+.conteudo-card p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #555;
+    font-size: 0.9rem; 
+}
+
+.ficha-tecnica {
+    background-color: #f9f9f9;
+    padding: 15px 20px; 
+    border-top: 1px solid #eee;
+    font-size: 0.85rem; 
+}
+
+.ficha-tecnica ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ficha-tecnica li {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 3px;
+}
+
+.ficha-tecnica li:last-child {
+    border-bottom: none;
+}
+
+.ficha-tecnica strong {
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-right: 10px;
+}
