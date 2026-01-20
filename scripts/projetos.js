@@ -11,7 +11,7 @@ function carregarProjetosDetalhadamente() {
         })
         .catch(error => {
             console.error('Erro:', error);
-            gridContainer.innerHTML = '<p>Erro ao carregar projetos.</p>';
+            gridContainer.innerHTML = '<p>Não foi possivel carregar os projetos.</p>';
         });
 }
 
