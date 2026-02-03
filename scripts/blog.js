@@ -1,5 +1,3 @@
-/* scripts/blog.js */
-
 const container = document.getElementById('blogContainer');
 
 function carregarPosts() {
@@ -27,10 +25,10 @@ function carregarPosts() {
 }
 
 function criarCardsBlog(lista) {
-    // Ordena do mais recente para o mais antigo
+
     lista.sort((a, b) => new Date(b.data) - new Date(a.data));
 
-    container.innerHTML = ""; // Limpa antes de preencher
+    container.innerHTML = ""; 
 
     lista.forEach(post => {
         const card = document.createElement('article');
@@ -59,7 +57,7 @@ function criarCardsBlog(lista) {
 document.addEventListener('DOMContentLoaded', () => {
     carregarPosts();
     
-    // Menu e Rodapé
+
     const menuBotao = document.querySelector('.menu-toggle');
     const menuLista = document.querySelector('.nav-list');
     if (menuBotao) menuBotao.addEventListener('click', () => menuLista.classList.toggle('active'));

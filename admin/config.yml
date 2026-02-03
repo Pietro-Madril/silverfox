@@ -7,12 +7,13 @@ public_folder: "images"
 
 collections:
   - name: "configuracoes"
-    label: "Gerenciar Blog"
+    label: "Gerenciar Conteúdo"
     files:
+      # ARTIGOS
       - name: "banco_artigos"
         label: "Editar Artigos"
         file: "data/artigos.json"
-        description: "Adicione e edite seus posts aqui"
+        description: "Adicione e edite seus posts do blog"
         fields:
           - name: "artigos"
             label: "Lista de Artigos"
@@ -25,3 +26,26 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Resumo", name: "resumo", widget: "text"}
               - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+
+      #  PROJETOS 
+      - name: "banco_projetos"
+        label: "Editar Projetos"
+        file: "data/projetos.json"
+        description: "Gerencie seu portfólio"
+        fields:
+          - name: "projetos"
+            label: "Lista de Projetos"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Descrição Completa", name: "descricao", widget: "text"}
+              - {label: "Link do Botão", name: "link", widget: "string", default: "projetos.html"}
+              
+              # Ficha Técnica como Lista de Itens
+              - name: "ficha_tecnica"
+                label: "Ficha Técnica"
+                widget: "list"
+                fields:
+                  - {label: "Nome do Item (Ex: Direção)", name: "item", widget: "string"}
+                  - {label: "Valor (Ex: Pietro)", name: "texto", widget: "string"}

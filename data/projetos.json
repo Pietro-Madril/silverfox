@@ -1,20 +1,42 @@
-[
-  {
-    "titulo": "Alice no País das Maravilhas",
-    "descricao": "Isso depende... do lugar! Eonde quer ir... Então, não importa que caminho tomar? Oh... não pode evitar. Tudo aqui é maluco...",
-    "imagem": "images/alice.png",
-    "link": "projetos.html"
-  },
-  {
-    "titulo": "E essa tal de Salamanca?",
-    "descricao": "Dizem os antigo que que nessas banda do Jarau tem um lugar que sempre se avista um vivente na subida do cerro, sempre falando da tal da Salamanca",
-    "imagem": "images/salamanca.png",
-    "link": "projetos.html"
-  },
-  {
-    "titulo": "Raposa Prateada",
-    "descricao": "Seja bem-vindo aventureiro! Chegou em boa hora. Puxe uma cadeira e sente-se, está na hora de ouvir uma boa história.",
-    "imagem": "images/logo_2.png",
-    "link": "projetos.html"
-  }
-]
+{
+  "projetos": [
+    {
+      "titulo": "Alice no País das Maravilhas",
+      "imagem": "images/alice.png",
+      "descricao": "Isso depende... do lugar! E onde quer ir... Este foi um exercício realizado como parte da avaliação da disciplica Direção III no terceiro semestre do curso. Trouxemos o clássico Alice no País das Maravilhas para principalmente explorarmos como podemos dar vida e um toque pessoal na atuação, mesmo sendo personagens amplamente conhecidos por conta da literatura e cinema.",
+      "link": "projetos.html",
+      "ficha_tecnica": [
+        { "item": "Data de Apresentação", "texto": "26 de Junho de 2025" },
+        { "item": "Disciplina", "texto": "Direção III: O Texto" },
+        { "item": "Orientação", "texto": "Diordinis Baierle" },
+        { "item": "Direção e Sonoplastia", "texto": "Pietro Motta Madril" },
+        { "item": "Iluminação", "texto": "Brandon Stiven Martinez" },
+        { "item": "Elenco", "texto": "Anderson Schuster, Bernardo Rosa, Ellen Faccin, João Henrique Rodrigues, Cassie Mendez, Kelly Lebens, Lorenzo da Costa, Luiza Reginatto, Maria Luisa Antunes, Mariana Ayres, Paulo Régis" }
+      ]
+    },
+    {
+      "titulo": "E essa tal de Salamanca?",
+      "imagem": "images/salamanca.png",
+      "descricao": "Dizem os antigo que que nessas banda do Jarau tem um lugar que sempre se avista um vivente na subida do cerro, sempre falando da tal da Salamanca. Realizado como parte da avaliação da disciplica Direção IV, nossa principal inspiração veio da lenda gaúcha Salamanca do Jarau.",
+      "link": "projetos.html",
+      "ficha_tecnica": [
+        { "item": "Data de Apresentação", "texto": "21 e 24 de Novembro de 2025" },
+        { "item": "Disciplina", "texto": "Direção IV: Circulação" },
+        { "item": "Orientação", "texto": "Maria Antônia Saccol da Costa" },
+        { "item": "Direção e Roteiro", "texto": "Pietro Motta Madril" },
+        { "item": "Elenco", "texto": "Cassie Mendez, Luiz Hani e Paulo Régis" }
+      ]
+    },
+    {
+      "titulo": "Raposa Prateada",
+      "imagem": "images/logo_2.png",
+      "descricao": "Seja bem-vindo aventureiro! Chegou em boa hora. Puxe uma cadeira e sente-se, está na hora de ouvir uma boa história. A Raposa Prateada é um projeto pessoal para registrar trabalhos realizados durante o meu tempo na faculdade.",
+      "link": "projetos.html",
+      "ficha_tecnica": [
+        { "item": "Plataformas", "texto": "Instagram e futuramente Youtube" },
+        { "item": "Redes Sociais", "texto": "@raposa_prateada.sm" },
+        { "item": "Contato", "texto": "raposaprateada.guild@gmail.com" }
+      ]
+    }
+  ]
+}

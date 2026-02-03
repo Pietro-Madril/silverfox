@@ -6,8 +6,15 @@ function buscarProjetos() {
             if (!response.ok) throw new Error("Erro ao carregar JSON");
             return response.json();
         })
-        .then(projetos => {
-            criarCards(projetos);
+        .then(dados => {
+       
+            const lista = dados.projetos || dados;
+
+            if (Array.isArray(lista)) {
+                criarCards(lista);
+            } else {
+                console.error("Formato de projetos inválido na Home:", dados);
+            }
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -16,7 +23,8 @@ function buscarProjetos() {
 }
 
 function criarCards(listaDeProjetos) {
-    listaDeProjetos.forEach(projeto => {
+  
+    listaDeProjetos.slice(0, 3).forEach(projeto => {
         
         const card = document.createElement('article');
         card.classList.add('card');
@@ -25,11 +33,15 @@ function criarCards(listaDeProjetos) {
             window.location.href = 'projetos.html';
         };
 
+        const descricao = projeto.descricao || "Sem descrição disponível.";
+
+        const descricaoCurta = descricao.length > 100 ? descricao.substring(0, 100) + "..." : descricao;
+
         card.innerHTML = `
             <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy">
             <div class="card-content">
                 <h3 class="card-title">${projeto.titulo}</h3>
-                <p class="card-desc">${projeto.descricao}</p>
+                <p class="card-desc">${descricaoCurta}</p>
             </div>
         `;
 
