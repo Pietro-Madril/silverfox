@@ -1,5 +1,3 @@
-/* scripts/artigo.js */
-
 const container = document.getElementById('artigoContainer');
 const params = new URLSearchParams(window.location.search);
 const idArtigo = params.get('id');
@@ -15,8 +13,16 @@ function carregarArtigo() {
             if (!response.ok) throw new Error("Erro ao carregar banco de artigos");
             return response.json();
         })
-        .then(artigos => {
-            const artigoEncontrado = artigos.find(a => a.id === idArtigo);
+        .then(dados => {
+        
+            const lista = dados.artigos || dados;
+
+            if (!Array.isArray(lista)) {
+                throw new Error("Formato de dados inválido");
+            }
+
+            const artigoEncontrado = lista.find(a => a.id === idArtigo);
+            
             if (artigoEncontrado) {
                 renderizarArtigo(artigoEncontrado);
             } else {
@@ -30,9 +36,12 @@ function carregarArtigo() {
 }
 
 function renderizarArtigo(post) {
+
     const autorNome = post.autor || "Pietro Madril";
     const autorImagem = "images/mestre.jpg"; 
     const autorBio = "Amante de Video Games, RPG, Fantasia e Cultura Japonesa. Estudante de Licenciatura em Teatro da UFSM.";
+
+
     container.innerHTML = `
         
         <div class="card-texto">
@@ -45,7 +54,7 @@ function renderizarArtigo(post) {
         <div class="card-autor">
             <img src="${autorImagem}" alt="${autorNome}" class="autor-foto">
             <div class="autor-info">
-                <h3>${autorNome}</h3>
+                <h3>Escrito por ${autorNome}</h3>
                 <p class="autor-bio">${autorBio}</p>
                 <a href="blog.html" class="btn-voltar">&larr; Voltar para o Blog</a>
             </div>

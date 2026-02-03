@@ -1,27 +1,27 @@
 backend:
   name: git-gateway
-  branch: main # ,ain branch
+  branch: main
 
-# Onde as imagens  serão salvas
 media_folder: "images"
 public_folder: "images"
 
-#  editar o arquivo JSON
 collections:
-  - name: "artigos"
-    label: "Artigos do Blog"
+  - name: "configuracoes"
+    label: "Gerenciar Blog"
     files:
-      - name: "todos_artigos"
-        label: "Lista de Artigos"
-        file: "data/artigos.json" # arquivo alvo
-        description: "Adicione ou edite seus artigos aqui"
-        format: "json" # Avisa que é JSON
+      - name: "banco_artigos"
+        label: "Editar Artigos"
+        file: "data/artigos.json"
+        description: "Adicione e edite seus posts aqui"
         fields:
-          # formulário que você vai preencher
-          - {label: "ID do Link", name: "id", widget: "string", hint: "Use apenas letras minúsculas e traços. Ex: meu-primeiro-post"}
-          - {label: "Título", name: "titulo", widget: "string"}
-          - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
-          - {label: "Autor", name: "autor", widget: "string", default: "Pietro Madril"}
-          - {label: "Imagem", name: "imagem", widget: "image"}
-          - {label: "Resumo", name: "resumo", widget: "text"}
-          - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+          - name: "artigos"
+            label: "Lista de Artigos"
+            widget: "list"
+            fields:
+              - {label: "ID (Link)", name: "id", widget: "string"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
+              - {label: "Autor", name: "autor", widget: "string", default: "Pietro Madril"}
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Resumo", name: "resumo", widget: "text"}
+              - {label: "Conteúdo", name: "conteudo", widget: "markdown"}

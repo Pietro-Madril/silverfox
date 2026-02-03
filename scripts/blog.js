@@ -8,8 +8,17 @@ function carregarPosts() {
             if (!response.ok) throw new Error("Erro ao carregar artigos");
             return response.json();
         })
-        .then(posts => {
-            criarCardsBlog(posts);
+        .then(dados => {
+
+            let lista = dados.artigos || dados;
+            
+
+            if (!Array.isArray(lista)) {
+                console.error("Formato de dados inesperado:", dados);
+                return;
+            }
+
+            criarCardsBlog(lista);
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -18,7 +27,10 @@ function carregarPosts() {
 }
 
 function criarCardsBlog(lista) {
+    // Ordena do mais recente para o mais antigo
     lista.sort((a, b) => new Date(b.data) - new Date(a.data));
+
+    container.innerHTML = ""; // Limpa antes de preencher
 
     lista.forEach(post => {
         const card = document.createElement('article');
@@ -29,6 +41,7 @@ function criarCardsBlog(lista) {
         };
 
         const dataFormatada = new Date(post.data).toLocaleDateString('pt-BR');
+
         card.innerHTML = `
             <img src="${post.imagem}" alt="${post.titulo}" loading="lazy">
             
@@ -46,6 +59,7 @@ function criarCardsBlog(lista) {
 document.addEventListener('DOMContentLoaded', () => {
     carregarPosts();
     
+    // Menu e Rodapé
     const menuBotao = document.querySelector('.menu-toggle');
     const menuLista = document.querySelector('.nav-list');
     if (menuBotao) menuBotao.addEventListener('click', () => menuLista.classList.toggle('active'));
