@@ -1,13 +1,13 @@
-[
-  {
-    "id": "teste",
-    "titulo": "Teste de Página",
-    "data": "2024-02-02",
-    "autor": "Pietro Madril",
-    "imagem": "images/placeholder.jpg",
-    "resumo": "Teste.",
-    "conteudo": "<p>Este é um parágrafo de teste.</p><p>Teste para ver se o <strong>HTML</strong> dentro do JSON funciona corretamente.</p>"
-  }
-]
-
-
+{
+  "artigos": [
+    {
+      "id": "teste",
+      "titulo": "Teste de Página",
+      "data": "2024-02-02",
+      "autor": "Pietro Madril",
+      "imagem": "images/placeholder.jpg",
+      "resumo": "Teste.",
+      "conteudo": "<p>Este é um parágrafo de teste.</p><p>Teste para ver se o <strong>HTML</strong> dentro do JSON funciona corretamente.</p>"
+    }
+  ]
+}
