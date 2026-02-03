@@ -8,6 +8,15 @@
       "imagem": "images/placeholder.jpg",
       "resumo": "Teste.",
       "conteudo": "<p>Este é um parágrafo de teste.</p><p>Teste para ver se o <strong>HTML</strong> dentro do JSON funciona corretamente.</p>"
+    },
+    {
+      "autor": "Pietro Madril",
+      "data": "2026-02-03",
+      "id": "teste02",
+      "titulo": "teste02",
+      "resumo": "teste do cms funcionando\n",
+      "conteudo": "vamo ver se esse negocio funciona",
+      "imagem": "images/mestre.jpg"
     }
   ]
 }
