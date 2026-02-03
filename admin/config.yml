@@ -1,23 +1,23 @@
 backend:
   name: git-gateway
-  branch: main # O nome do seu branch principal no GitHub (pode ser 'master' ou 'main')
+  branch: main # ,ain branch
 
-# Onde as imagens que você subir pelo painel serão salvas
+# Onde as imagens  serão salvas
 media_folder: "images"
 public_folder: "images"
 
-# Aqui configuramos para ele editar o arquivo JSON
+#  editar o arquivo JSON
 collections:
   - name: "artigos"
     label: "Artigos do Blog"
     files:
       - name: "todos_artigos"
         label: "Lista de Artigos"
-        file: "data/artigos.json" # O arquivo alvo
+        file: "data/artigos.json" # arquivo alvo
         description: "Adicione ou edite seus artigos aqui"
         format: "json" # Avisa que é JSON
         fields:
-          # Estes campos abaixo são o formulário que você vai preencher
+          # formulário que você vai preencher
           - {label: "ID do Link", name: "id", widget: "string", hint: "Use apenas letras minúsculas e traços. Ex: meu-primeiro-post"}
           - {label: "Título", name: "titulo", widget: "string"}
           - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
