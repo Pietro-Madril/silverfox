@@ -56,7 +56,7 @@ function renderizarArtigo(post) {
             <div class="autor-info">
                 <h3>Escrito por ${autorNome}</h3>
                 <p class="autor-bio">${autorBio}</p>
-                <a href="blog.html" class="btn-voltar">&larr; Voltar para o Blog</a>
+                <a href="blog.html" class="btn-voltar">&larr; Voltar para a página anterior</a>
             </div>
         </div>
     `;
