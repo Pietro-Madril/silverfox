@@ -1,3 +1,13 @@
 {
-  "artigos": []
+  "artigos": [
+    {
+      "autor": "Pietro Madril",
+      "data": "2026-02-03",
+      "id": "teste",
+      "titulo": "teste",
+      "imagem": "images/placeholder.jpg",
+      "resumo": "teste",
+      "conteudo": "teste"
+    }
+  ]
 }
