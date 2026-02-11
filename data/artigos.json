@@ -1,3 +1,13 @@
 {
-  "artigos": []
+  "artigos": [
+    {
+      "autor": "Pietro Madril",
+      "data": "2026-02-11",
+      "id": "batatatafrita",
+      "titulo": "123",
+      "imagem": "https://www.universodasaudeanimal.com.br/wp-content/uploads/sites/57/2021/07/Leghorn-e-uma-das-racas-de-galinhas-poedeiras-mais-famosas-1.jpg",
+      "resumo": "treste",
+      "conteudo": "s﻿dfgjkhbsdrafg hdarfkgbhksdfkgh.serdhgkfhkdffkhgjsdffkhugasdvkhgsdgikluhfvsedgkuhlfgkhldarffgklhadfghklasdfghklvgkhsfdlfvhkgjlsdfhkjlasdfgkhlgakslhdygkluhsdfa"
+    }
+  ]
 }
