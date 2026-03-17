@@ -41,14 +41,15 @@ function renderizarArtigo(post) {
     const autorImagem = "images/mestre.jpg"; 
     const autorBio = "Amante de Video Games, RPG, Fantasia e Cultura Japonesa. Estudante de Licenciatura em Teatro da UFSM.";
 
+    //Formatar texto
+    const conteudoFormatado = marked.parse(post.conteudo);
 
     container.innerHTML = `
         
         <div class="card-texto">
             <h1 class="artigo-titulo">${post.titulo}</h1>
             <div class="artigo-conteudo">
-                ${post.conteudo}
-            </div>
+                ${conteudoFormatado} </div>
         </div>
 
         <div class="card-autor">
